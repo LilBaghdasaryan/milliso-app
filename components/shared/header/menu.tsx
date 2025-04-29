@@ -1,21 +1,18 @@
-import { Link } from 'lucide-react'
+import { ShoppingCartIcon, UserIcon } from 'lucide-react'
+import Link from 'next/link'
 import React from 'react'
 
 export default function Menu() {
   return (
-    <div>
-      <nav>
-        <Link
-          href='/home'
-          className='text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
-        >
-          Home
+    <div className='flex justify-end'>
+      <nav className='flex gap-3 w-full'>
+        <Link href='/signin' className='header-button'>
+          <UserIcon className='h-8 w-8' />
+          <span className='font-bold'>Sign in</span>
         </Link>
-        <Link
-          href='/about'
-          className='text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
-        >
-          About
+        <Link href='/cart' className='header-button'>
+          <ShoppingCartIcon className='h-8 w-8' />
+          <span className='font-bold'>Cart</span>
         </Link>
       </nav>
     </div>
